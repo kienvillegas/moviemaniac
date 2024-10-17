@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 // import "../DarkMode/DarkMode.jsx";
 import fireIcon from "../../assets/fire.png";
@@ -10,17 +11,17 @@ const Navbar = () => {
       <h1>MovieManiac</h1>
 
       <div className="navbar_links">
-        <a href="#popular">
+        <NavLink to="/">
           Popular <img className="navbar_emoji" src={fireIcon} alt="" />
-        </a>
-        <a href="#top_rated">
+        </NavLink>
+        <NavLink to="/top_rated">
           Top Rated{" "}
           <img className="navbar_emoji" src={glowingStarIcon} alt="" />
-        </a>
-        <a href="#upcoming">
+        </NavLink>
+        <NavLink to="/upcoming">
           Upcoming{" "}
           <img className="navbar_emoji" src={partyingFaceIcon} alt="" />
-        </a>
+        </NavLink>
       </div>
     </nav>
   );
